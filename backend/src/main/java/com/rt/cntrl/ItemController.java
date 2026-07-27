@@ -23,13 +23,13 @@ public class ItemController {
         this.itemService = itemService;
     }
 
-    // Add Item
+    
     @PostMapping
     public ResponseEntity<ItemResponseDto> addItem(@Valid @RequestBody ItemRequestDto dto) {
         return new ResponseEntity<>(itemService.addItem(dto), HttpStatus.CREATED);
     }
 
-    // Update Item
+    
     @PutMapping("/{id}")
     public ResponseEntity<ItemResponseDto> updateItem(
             @PathVariable Long id,
@@ -38,7 +38,7 @@ public class ItemController {
         return ResponseEntity.ok(itemService.updateItem(id, dto));
     }
 
-    // Delete Item
+
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteItem(@PathVariable Long id) {
 
@@ -46,21 +46,21 @@ public class ItemController {
         return ResponseEntity.ok("Item Deleted Successfully");
     }
 
-    // Get Item By Id
+    
     @GetMapping("/{id}")
     public ResponseEntity<ItemResponseDto> getItemById(@PathVariable Long id) {
 
         return ResponseEntity.ok(itemService.getItemById(id));
     }
 
-    // Get All Items
+
     @GetMapping
     public ResponseEntity<List<ItemResponseDto>> getAllItems() {
 
         return ResponseEntity.ok(itemService.getAllItems());
     }
 
-    // Search By Item Name
+    
     @GetMapping("/search/name")
     public ResponseEntity<List<ItemResponseDto>> searchByItemName(
             @RequestParam String itemName) {
@@ -68,7 +68,7 @@ public class ItemController {
         return ResponseEntity.ok(itemService.searchByItemName(itemName));
     }
 
-    // Search By Category
+
     @GetMapping("/search/category")
     public ResponseEntity<List<ItemResponseDto>> searchByCategory(
             @RequestParam String category) {

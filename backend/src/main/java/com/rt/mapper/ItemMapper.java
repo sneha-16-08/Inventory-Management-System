@@ -9,7 +9,7 @@ import com.rt.entity.Item;
 @Component
 public class ItemMapper {
 
-    // Convert Request DTO to Entity
+
     public Item toEntity(ItemRequestDto dto) {
 
         Item item = new Item();
@@ -23,7 +23,7 @@ public class ItemMapper {
         return item;
     }
 
-    // Convert Entity to Response DTO
+    
     public ItemResponseDto toResponseDto(Item item) {
 
         ItemResponseDto dto = new ItemResponseDto();
