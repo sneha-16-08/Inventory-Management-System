@@ -1,0 +1,73 @@
+/* Remove full black background */
+
+body {
+    background-color: white !important;
+    color: black;
+}
+
+
+/* Navbar black */
+
+.navbar {
+    background-color: black !important;
+}
+
+
+/* Card */
+
+.card {
+    background-color: white !important;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
+}
+
+
+/* Card Header black */
+
+.card-header,
+.bg-primary {
+
+    background-color: black !important;
+    color: white !important;
+
+}
+
+
+/* Table Header black */
+
+.table-primary th,
+.table thead th {
+
+    background-color: black !important;
+    color: white !important;
+
+}
+
+
+/* Buttons */
+
+.btn-primary {
+
+    background-color: black !important;
+    border-color: black !important;
+    color: white !important;
+
+}
+
+
+.btn-primary:hover {
+
+    background-color: #333 !important;
+
+}
+
+
+/* Normal text */
+
+label,
+.card-body {
+
+    color: black;
+
+}
